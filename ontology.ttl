@@ -78,10 +78,22 @@ dhb:amountOfParticipants a owl:DatatypeProperty ;
   rdfs:isDefinedBy : .
 
 dhb:level a owl:DatatypeProperty ;
+  rdfs:label       "has level" ;
+  rdfs:comment     "Set the minimum level of the battle (e.g., amateur, pro)." ;
+  rdfs:domain      dhb:DanceBattle ;
+  rdfs:isDefinedBy : .
 
 dhb:gender a owl:DatatypeProperty ;
+  rdfs:label       "has gender" ;
+  rdfs:comment     "Set the gender of the battle (e.g., female)." ;
+  rdfs:domain      dhb:DanceBattle ;
+  rdfs:isDefinedBy : .
 
 dhb:age a owl:DatatypeProperty ;
+  rdfs:label       "has age" ;
+  rdfs:comment     "Set the age requirements of the battle (e.g., -11, 18+)." ;
+  rdfs:domain      dhb:DanceBattle ;
+  rdfs:isDefinedBy : .
 
 dhb:inviteOnly a owl:DatatypeProperty ;
   rdfs:label       "is invitation only" ;
