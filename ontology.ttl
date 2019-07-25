@@ -1,0 +1,93 @@
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <http://schema.org/> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix voaf:   <http://purl.org/vocommons/voaf#> .
+@prefix vann:   <http://purl.org/vocab/vann/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dhb:    <https://dancehallbattle.org/ontology/> .
+@prefix :      <https://dancehallbattle.org/ontology> .
+
+: a owl:Ontology, voaf:Vocabulary, schema:Thing, schema:CreativeWork;
+  rdfs:label                    "Dancehall Battle Ontology"@en;
+  dct:title                     "Dancehall Battle Ontology"@en;
+  rdfs:label                    "Dancehall Battle Ontology"@nl;
+  dct:title                     "Dancehall Battle Ontology"@nl;
+  rdfs:comment                  "The ontology focusses on the concepts of Dancehall/dance battles."@en;
+  dct:description               "The ontology focusses on the concepts of Dancehall/dance battles."@en;
+  rdfs:comment                  "De ontology focust op de concepten van Dancehall/dance battles."@nl;
+  dct:description               "De ontology focust op de concepten van Dancehall/dance battles."@nl;
+  schema:creator                <https://dancehallbattle.org/#bow>;
+  dct:creator                   <https://dancehallbattle.org/#bow>;
+  schema:dateCreated            "2019-07-25"^^schema:date;
+  dct:issued                    "2019-07-25"^^xsd:date;
+  schema:dateModified           "2019-07-25"^^schema:date;
+  dct:modified                  "2019-07-25"^^xsd:date;
+  owl:versionInfo               "1.0"^^xsd:decimal;
+  vann:preferredNamespacePrefix "dhb";
+  vann:preferredNamespaceUri    "https://dancehallbattle.org/ontology/";
+  schema:license                <http://creativecommons.org/publicdomain/zero/1.0> ;
+  dct:license                   <http://creativecommons.org/publicdomain/zero/1.0> .
+
+###########
+# Classes #
+###########
+
+dhb:DanceEvent a rdfs:Class ;
+  rdfs:label       "Dance event" ;
+  rdfs:comment     "A dance event." ;
+  rdfs:subClassOf  schema:Thing, schema:Event ;
+  rdfs:isDefinedBy : .
+
+dhb:DanceBattle a rdfs:Class ;
+  rdfs:label       "Dance battle" ;
+  rdfs:comment     "A dance battle." ;
+  rdfs:subClassOf  schema:Thing, schema:Event ;
+  rdfs:isDefinedBy : .
+
+dhb:Dancer a rdfs:Class ;
+  rdfs:label       "Dancer" ;
+  rdfs:comment     "A dancer." ;
+  rdfs:subClassOf  schema:Thing, schema:Person ;
+  rdfs:isDefinedBy : .
+
+##############
+# Properties #
+##############
+
+dhb:hasBattle a owl:ObjectProperty ;
+  rdfs:label       "has battle" ;
+  rdfs:comment     "Links an event to a battle." ;
+  rdfs:domain      dhb:DanceEvent ;
+  rdfs:range       dhb:DanceBattle ;
+  rdfs:isDefinedBy : .
+
+dhb:hasWinner a owl:ObjectProperty ;
+  rdfs:label       "has winner" ;
+  rdfs:comment     "Links an battle to a winner." ;
+  rdfs:domain      dhb:DanceBattle ;
+  rdfs:range       dhb:Dancer ;
+  rdfs:isDefinedBy : .
+
+dhb:amountOfParticipants a owl:DatatypeProperty ;
+  rdfs:label       "has battle" ;
+  rdfs:comment     "Links an event to a battle." ;
+  rdfs:domain      dhb:DanceBattle ;
+  rdfs:range       xsd:integer ;
+  rdfs:isDefinedBy : .
+
+dhb:level a owl:DatatypeProperty ;
+
+dhb:gender a owl:DatatypeProperty ;
+
+dhb:age a owl:DatatypeProperty ;
+
+dhb:inviteOnly a owl:DatatypeProperty ;
+  rdfs:label       "is invitation only" ;
+  rdfs:comment     "Denotes whether a battle is invitation only or not." ;
+  rdfs:domain      dhb:DanceBattle ;
+  rdfs:range       xsd:boolean ;
+  rdfs:isDefinedBy : .
+
+dhb:representsCountry a owl:DatatypeProperty ;
