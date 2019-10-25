@@ -14,17 +14,17 @@
   dct:title                     "Dancehall Battle Ontology"@en;
   rdfs:label                    "Dancehall Battle Ontology"@nl;
   dct:title                     "Dancehall Battle Ontology"@nl;
-  rdfs:comment                  "The ontology focusses on the concepts of Dancehall/dance battles."@en;
-  dct:description               "The ontology focusses on the concepts of Dancehall/dance battles."@en;
+  rdfs:comment                  "The ontology focuses on the concepts of Dancehall/dance battles."@en;
+  dct:description               "The ontology focuses on the concepts of Dancehall/dance battles."@en;
   rdfs:comment                  "De ontology focust op de concepten van Dancehall/dance battles."@nl;
   dct:description               "De ontology focust op de concepten van Dancehall/dance battles."@nl;
   schema:creator                <https://dancehallbattle.org/#bow>;
   dct:creator                   <https://dancehallbattle.org/#bow>;
   schema:dateCreated            "2019-07-25"^^schema:date;
   dct:issued                    "2019-07-25"^^xsd:date;
-  schema:dateModified           "2019-07-25"^^schema:date;
-  dct:modified                  "2019-07-25"^^xsd:date;
-  owl:versionInfo               "1.0"^^xsd:decimal;
+  schema:dateModified           "2019-10-25"^^schema:date;
+  dct:modified                  "2019-10-25"^^xsd:date;
+  owl:versionInfo               "1.1"^^xsd:decimal;
   vann:preferredNamespacePrefix "dhb";
   vann:preferredNamespaceUri    "https://dancehallbattle.org/ontology/";
   schema:license                <http://creativecommons.org/publicdomain/zero/1.0> ;
@@ -68,6 +68,13 @@ dhb:hasWinner a owl:ObjectProperty ;
   rdfs:comment     "Links an battle to a winner." ;
   rdfs:domain      dhb:DanceBattle ;
   rdfs:range       dhb:Dancer ;
+  rdfs:isDefinedBy : .
+
+dhb:previousEdition a owl:ObjectProperty ;
+  rdfs:label       "previous edition" ;
+  rdfs:comment     "Previous edition of an event." ;
+  rdfs:domain      dhb:DanceEvent ;
+  rdfs:range       dhb:DanceEvent ;
   rdfs:isDefinedBy : .
 
 dhb:amountOfParticipants a owl:DatatypeProperty ;
