@@ -24,7 +24,7 @@
   dct:issued                    "2019-07-25"^^xsd:date;
   schema:dateModified           "2019-10-25"^^schema:date;
   dct:modified                  "2019-10-25"^^xsd:date;
-  owl:versionInfo               "1.1"^^xsd:decimal;
+  owl:versionInfo               "1.2"^^xsd:decimal;
   vann:preferredNamespacePrefix "dhb";
   vann:preferredNamespaceUri    "https://dancehallbattle.org/ontology/";
   schema:license                <http://creativecommons.org/publicdomain/zero/1.0> ;
@@ -77,9 +77,16 @@ dhb:previousEdition a owl:ObjectProperty ;
   rdfs:range       dhb:DanceEvent ;
   rdfs:isDefinedBy : .
 
+dhb:hasParticipant a owl:ObjectProperty ;
+  rdfs:label       "has participant" ;
+  rdfs:comment     "Links a battle to participants." ;
+  rdfs:domain      dhb:DanceBattle ;
+  rdfs:range       dhb:Dancer ;
+  rdfs:isDefinedBy : .
+
 dhb:amountOfParticipants a owl:DatatypeProperty ;
-  rdfs:label       "has battle" ;
-  rdfs:comment     "Links an event to a battle." ;
+  rdfs:label       "amount of participants" ;
+  rdfs:comment     "Amount of participants of a battle." ;
   rdfs:domain      dhb:DanceBattle ;
   rdfs:range       xsd:integer ;
   rdfs:isDefinedBy : .
