@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+## [1.2.0] - 2019-10-25
+
+### Added
+- Property for participant of battle (see [issue 5](https://github.com/dancehall-battle/ontology/issues/5))
+
+### Fixed
+- Label and comment of `dhb:amountOfParticipants`
+
 ## [1.1.0] - 2019-10-25
 
 ### Added
