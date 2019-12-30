@@ -78,7 +78,7 @@ dhb:CountryRanking a rdfs:Class ;
 
 dhb:DancerRanking a rdfs:Class ;
   rdfs:label       "Dancer ranking" ;
-  rdfs:comment     "A ranking for dancer." ;
+  rdfs:comment     "A ranking for dancers." ;
   rdfs:subClassOf  schema:Thing, dhb:Ranking ;
   rdfs:isDefinedBy : .
 
