@@ -22,9 +22,9 @@
   dct:creator                   <https://dancehallbattle.org/#bow>;
   schema:dateCreated            "2019-07-25"^^schema:date;
   dct:issued                    "2019-07-25"^^xsd:date;
-  schema:dateModified           "2019-10-25"^^schema:date;
-  dct:modified                  "2019-10-25"^^xsd:date;
-  owl:versionInfo               "1.2"^^xsd:decimal;
+  schema:dateModified           "2019-12-30"^^schema:date;
+  dct:modified                  "2019-12-30"^^xsd:date;
+  owl:versionInfo               "1.3"^^xsd:decimal;
   vann:preferredNamespacePrefix "dhb";
   vann:preferredNamespaceUri    "https://dancehallbattle.org/ontology/";
   schema:license                <http://creativecommons.org/publicdomain/zero/1.0> ;
@@ -50,6 +50,48 @@ dhb:Dancer a rdfs:Class ;
   rdfs:label       "Dancer" ;
   rdfs:comment     "A dancer." ;
   rdfs:subClassOf  schema:Thing, schema:Person ;
+  rdfs:isDefinedBy : .
+
+dhb:Ranking a rdfs:Class ;
+  rdfs:label       "Ranking" ;
+  rdfs:comment     "A ranking." ;
+  rdfs:subClassOf  schema:Thing ;
+  rdfs:isDefinedBy : .
+
+dhb:HomeRanking a rdfs:Class ;
+  rdfs:label       "Home ranking" ;
+  rdfs:comment     "A ranking only considering home battles." ;
+  rdfs:subClassOf  schema:Thing, dhb:Ranking ;
+  rdfs:isDefinedBy : .
+
+dhb:AwayRanking a rdfs:Class ;
+  rdfs:label       "Home ranking" ;
+  rdfs:comment     "A ranking only considering away battles." ;
+  rdfs:subClassOf  schema:Thing, dhb:Ranking ;
+  rdfs:isDefinedBy : .
+
+dhb:CountryRanking a rdfs:Class ;
+  rdfs:label       "Country ranking" ;
+  rdfs:comment     "A ranking for countries." ;
+  rdfs:subClassOf  schema:Thing, dhb:Ranking ;
+  rdfs:isDefinedBy : .
+
+dhb:DancerRanking a rdfs:Class ;
+  rdfs:label       "Dancer ranking" ;
+  rdfs:comment     "A ranking for dancers." ;
+  rdfs:subClassOf  schema:Thing, dhb:Ranking ;
+  rdfs:isDefinedBy : .
+
+dhb:1vs1Ranking a rdfs:Class ;
+  rdfs:label       "1 vs 1 ranking" ;
+  rdfs:comment     "A ranking only considering 1 vs 1 battles." ;
+  rdfs:subClassOf  schema:Thing, dhb:Ranking ;
+  rdfs:isDefinedBy : .
+
+dhb:2vs2Ranking a rdfs:Class ;
+  rdfs:label       "2 vs 2 ranking" ;
+  rdfs:comment     "A ranking only considering 2 vs 2 battles." ;
+  rdfs:subClassOf  schema:Thing, dhb:Ranking ;
   rdfs:isDefinedBy : .
 
 ##############
@@ -114,6 +156,12 @@ dhb:inviteOnly a owl:DatatypeProperty ;
   rdfs:comment     "Denotes whether a battle is invitation only or not." ;
   rdfs:domain      dhb:DanceBattle ;
   rdfs:range       xsd:boolean ;
+  rdfs:isDefinedBy : .
+
+dhb:points a owl:DatatypeProperty ;
+  rdfs:label       "points of current rank" ;
+  rdfs:comment     "Denotes what the point is at the current rank." ;
+  rdfs:range       xsd:float ;
   rdfs:isDefinedBy : .
 
 dhb:representsCountry a owl:DatatypeProperty ;
