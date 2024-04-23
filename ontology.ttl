@@ -107,7 +107,14 @@ dhb:hasBattle a owl:ObjectProperty ;
 
 dhb:hasWinner a owl:ObjectProperty ;
   rdfs:label       "has winner" ;
-  rdfs:comment     "Links an battle to a winner." ;
+  rdfs:comment     "Links a battle to a winner." ;
+  rdfs:domain      dhb:DanceBattle ;
+  rdfs:range       dhb:Dancer ;
+  rdfs:isDefinedBy : .
+
+dhb:hasJudge a owl:ObjectProperty ;
+  rdfs:label       "has judge" ;
+  rdfs:comment     "Links a battle to a judge." ;
   rdfs:domain      dhb:DanceBattle ;
   rdfs:range       dhb:Dancer ;
   rdfs:isDefinedBy : .
