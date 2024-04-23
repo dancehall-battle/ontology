@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+### Added
+- Property hasJudge
+
+### Fixed
+- Typo description hasWinner
+
 ## [1.3.0] - 2019-12-30
 - Add classes and properties for rankings (see [issue 7](https://github.com/dancehall-battle/ontology/issues/7))
 
